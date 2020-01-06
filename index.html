@@ -14,7 +14,7 @@ font-size:3em;
 
 p {
 font-size:1.3em;
-width:50vw;
+width:800px;
 color: #edf5e1;
 margin-left:20px;
 margin-bottom:30px;
@@ -22,9 +22,10 @@ background-color: #379683;
 border-width: 2px;
   border-style: solid;
   border-color: #05386B;
+  display:inline-block;
 }
 
-img {  
+img, video {  
 	border-width: 6px;
   border-style: solid;
   border-color: #05386B;
@@ -32,6 +33,7 @@ height:50vh;
 margin-right:2px;
 margin-left:2px;
 padding: 0px,0px,0px,0px;
+display:inline-block;
   }
 
 
@@ -43,28 +45,88 @@ padding: 0px,0px,0px,0px;
   <body>
 	<h1>Aidan Bell's Project Gallery</h1>
 		<br>
-		<img src="robotarm.jpg">
-	<p><strong>Robot Arm Science Olympiad</strong><br>My partner and I had a very unique design, that used a flywheel to intake pennies onto a long sheath, on a carriage that can move along the length of that aluminum bar. The sheath would then invert to dump all of the pennies into the center of the archery target, (2x points for inverted, pennies cannot be on top of one another) </p>
+		
+<video  controls>
+  <source src="res/muse.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><strong>Hacking a muse EEG headset using ML to play breakout!</strong><br>I hacked a muse EEG meditation headset so I could use ML to recognize patterns in raw EEG data. After hours of trying to directly connect the headband to my computer, I eventually found an app that could reliably connect to the headset and send data over OSC, and then I hacked a c# OSC receiver program on my computer to write to a file that a python program could then pull the live data from. Once I got the live data into python, I just had to record the raw EEG data while performing various actions. With only around 15 minutes worth of training data (broken up to produce around 15,000 training samples, each with 120 previous values for each of the 4 eeg channels), and a relatively simple multilayer perceptron (480 inputs, 128, 128, 3 output), I had 99% accuracy detecting left clenched, right clenched, and unclenched jaw states, and 75% accuracy detecting thinking (and looking) up, down, or straight. In the video, I’m clenching my left or right jaw to control a game of Atari breakout. </p>
+<div></div>
+<video  controls>
+  <source src="res/bopit.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><strong>Turning a Bop it extreme into a controller</strong><br>Inspired by people playing video games with baguettes and pineapples online, I thought it would be ridiculously funny to play video games using a bop it. So, over Christmas break of 2018, I put the guts of an Xbox 360 controller inside a bop it! I soldered all of the buttons inside the bop it to the buttons on the Xbox controller, and mounted joysticks to the bop it. It was extremely difficult, but I turned one of the big round bop it buttons into a joystick.  I tried to preserve the bop it functionality, but sadly I had to remove the bop it circuit boards to make everything fit inside. I drove my FTC and FRC robots around with it for fun, and of course, I played video games with it. It has just enough buttons to play overwatch, and to shoot you spin the wheel :p The video is a clip from a Youtube video I made about the bop it. The full video is here: <a href="https://www.youtube.com/watch?v=Z8bw5sZtrDY&t=32s">https://www.youtube.com/watch?v=Z8bw5sZtrDY&t=32s</a> </p>
+<div></div>
+<video  controls>
+  <source src="res/leap.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><strong>Playing Minecraft without a mouse using my hands!</strong><br>I used a Leap motion hand sensor and processing to recognize hand gestures and hand position. I wrote a program that controls all the mouse functions in Minecraft, so that instead of using a mouse with your right hand you can actually do the actions. You punch to hit things, use an open hand to place things, use two fingers to look around, and one finger swiping changes item slots. As you can see at the end, you can also pull your ring finger in and then turn your hand to cast spells. My processing program types commands into the Minecraft chat really fast to communicate with the Minecraft mod I wrote for the spellcasting. So far you can teleport, and shoot fireballs and lightning! </p>
+<div></div>
+<video  controls>
+  <source src="res/ben10.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><strong>Ben 10 Minecraft Mod</strong><br>I’ve made dozens of mods, but the series I made about recreating ben 10 aliens was the most popular. The project ended up spanning several years with several complete rebuilds from the ground up (after I had learned more about modding, I wanted to reorganize the code to optimize it, and updates came out for Minecraft that changed stuff). The code is thousands of lines long, and I designed many of the 3d models, animations, and sound effects myself. I collaborated with other creators to make some of the models, because this was such a huge project. This version of my mod allows players to make an Omnitrix (the device from Ben 10 that allows you to shapeshift) and use it to transform into 10 unique aliens. This is a clip from one of my YouTube videos about the mod, and you can find the full video here: <a href="https://www.youtube.com/watch?v=MVKIs3semYc&t=944s">https://www.youtube.com/watch?v=MVKIs3semYc&t=944s</a><br>
+
+This mod ended up getting showcased by numerous other YouTubers, many with well over 1 million subscribers </p>
+<div></div>
+<video  controls>
+  <source src="res/zelda.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><strong>Zelda Slow Motion Bows Minecraft mod</strong><br>This is the most recent Minecraft mod I've made, that adds the time slowing effect from one of my favorite video games, Zelda Breath of the Wild. When you draw a bow in midair, time slows down so you can aim. Detecting when a player is drawing a bow is very difficult, and originally I completely reimplemented bows (with textures and sounds and everything) in Minecraft using a different item, so that I had access to all of the variables. Then I found that someone had figured out how to use invisible villagers for right click detection, so I switched back to native Minecraft bows, and was able to use invisible villagers constantly teleported to the player to determine when a bow starts to be drawn back. I also added exploding arrows, a fun item from Breath of the Wild. I made a video explaining my coding process, and the code I wrote, to encourage others to get into modding! Here's the video: <a href="https://www.youtube.com/watch?v=OAJFnZgi1uA&t=272s">https://www.youtube.com/watch?v=OAJFnZgi1uA&t=272s</a> </p>
+<div></div>
+<video  controls>
+  <source src="res/vocab.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><strong>Vocabulary.com chrome extension bot</strong><br>This is a chrome extension I wrote that automatically does Vocabulary.com questions. I was poking around the site's HTML, and noticed that some of the questions had hard coded in answers, so I couldn't help myself. At the time, I knew nothing about chrome extensions or JavaScript, so I spent the next three months learning and working on this project. For the multiple choice questions, the code actually scrapes Vocabulary.com's definition page for a word, and then determines if any of the answers are found in the definition page. The fill in the blank questions have the answers in the HTML, so they're easy. The program gets the right answer about 80% of the time, which I'm really happy with. It just automates all of the clicks, and it can actually click behind the timeout Vocabulary.com added to try to stop you from going too fast :) </p>
+<div></div>
+<video  controls>
+  <source src="res/football.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><strong>American units chrome extension</strong><br>I don't know why, but I think it's really funny when science documentaries or other media say stuff like "the largest blue whales are one third the length of a football field". I thought it would be hilarious to use football fields as a unit for everything, so I wrote a chrome extension that converts all units to football fields (even volume!). I had a lot of fun with this project, and I learned a lot about JavaScript and Regular Expressions. </p>
+<div></div>
+<video  controls>
+  <source src="res/robarm.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><strong>Science Olympiad Robot Arm 2017</strong><br>I had so much fun building this robot arm. We had to pick up stacks of pennies and place them in the center of the target. The pennies scored double if they were flipped, and scored no points if they were still on top of one another. My partner and I had a very unique design -- we went for a flywheel that sucks pennies one by one onto a sheath, that can then be flipped upside down in the center to score. Instead of building a traditional robot arm with joints, we built a carriage that can move across a beam, inspired by 3D printers. We wanted to write software to automate it, but we ran out of time and ended up using a controller. We placed 7th out of around 80 teams. This video is sped up 3x </p>
+<div></div>
+<video  controls>
+  <source src="res/hover.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><strong>Science Olympiad Hovercraft 2018</strong><br>My partner and I went through so many iterations on this hovercraft. Getting the skirt just right and orienting the main downward facing fan were challenging. We realized that an upside down cup actually helps the hovercraft float, even though it reduces airflow to the fan, because it helps the fan maintain a high pressure environment under the craft. This is a video of us testing the hovercraft on water after the competition. It worked! We ended up placing 7th. </p>
+<div></div>
+<video  controls>
+  <source src="res/wrightstuff.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><strong>Wright Stuff SciOly 2019</strong><br>This Science Olympiad event was absolutely nerve racking. The goal is to keep a rubber band powered glider in the air for as long as possible. I built a balsa wood glider with two wings, and designed it to constantly turn to the left so that it wouldn't hit a wall in the indoor testing room. We had two trials, and in the first trial I messed up the throw. As you can see in the video, the plane crashed right into the ground. My partner and I had three minutes to super glue the entire plane back together, and somehow the plane flew better than it ever had before. It was in the air for 110 seconds, something I'm really proud of! We were technically disqualified because we missed our competition time slot, but the judges let us fly our plane anyways. We might have had the best flight time at the event, but because we lost points from being disqualified we only got 11th out of ~ 80 teams.</p>
+<div></div>
+<video  controls>
+  <source src="res/ftc.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<p><strong>FTC Autonomous code</strong><br>I've loved helping build and design robots on my small FTC team over the last three years.  Last year, I decided to build up the framework for a mimic auto. A mimic auto saves encoder values while a human is driving, and then plays those values back so that the robot can drive itself. From the saved encoder values we calculated the robot's change in x, y, and rotation in between each data point. The recorded x,y, and rotation then became setpoints for our control system. Using this method, we were able to get smooth curves into our auto, and we ended up having one of the highest scoring and most consistent autos in all of the San Diego region. In the video, our robot is the one on the left with the number 10092. This year we decided to start from scratch and pursue a global field tracking system, favoring drawing points in a program over recordings. This makes adjusting the auto path afterwards much easier. </p>
+<div></div>
+
 
 		
 		<img src="soundofmusic.jpg">
 	<p><strong>Sound of Music Science Olympiad</strong><br>For this event, we had to build an instrument capable of playing a scale, and you got bonus points for volume. I essentially built a pitch adjustable airhorn, that was incredibly loud and had a trombone like straw that allowed you to change the pitch up to one octave. </p>
-	<img src="hovercraft.jpg">
-	<p><strong>Hovercraft SciOly</strong><br>We built a hovercraft that floats on a high pressure region underneath it (trapped by the skirt), and is propelled by a fan. It was even able to hover above water!<br> </p>
-	<img src="wrightstuff.jpg">
-	<p><strong>Wright Stuff SciOly</strong><br>This plane was able to stay in the air for over 100 seconds, using only a rubber band as power. It flew in large counterclockwise circles so we wouldn't lose it :)</p>
-	<img src="bopit.jpg" alt="image of deconstruced bop it with wires and an Xbox circuit board inside"><img src="bopitfinished2.jpg", alt="completed bop it, with a usb cable sticking out of it!">
-	<p><strong>An Xbox remote hacked into a Bop It</strong><br>I rewired all of the existing bop it buttons to the Xbox circuit board, so I could play video games and drive our robot with it!</p>
-	
-	
+	<div></div>
 	<img src="gokart.jpg">
 	<p><strong>Go Kart project!</strong><br>My friend and I built this custom Go Kart last summer. It was a lot of fun!</p>
+	<div></div>
 	<img src="shanerlab2.jpg"> <img src="solarsim.jpg">
 	<p>Me working on my solar simulator for the shaner lab, and the finished project</p>
-
-	<img src="gg.jpg">
-	<p>Here's the 2018-2019 robot I built with the Green Griffins, my FTC team</p>
-
+<div></div>
+	
 	<iframe src="https://www.openprocessing.org/sketch/556358/embed/" width="1420" scrolling="no" height="600"></iframe>
 	<p>Here's a game I made in 10th grade with two friends for a creative english project. You use the arrow keys to move, and the enter key to talk to people. I made it to allow players to understand, firsthand, how easily we warp our values to be agreeable with others, and how easy it is to loose yourself in a group setting</p>
 	<br>
