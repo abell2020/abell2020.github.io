@@ -3,40 +3,77 @@
   <head>
   <style>
 body {
-  background-image: url("gradient_bg2.png");
-  background-repeat: repeat-x;
-  background-color: #5CDB95;
+
+  
+  font-family: Arial, Helvetica, sans-serif;
+   background-image: url("gradient_bg3.png");
+  background-repeat: repeat-y;
+  background-color: #A5FFEE;
 }
 h1{
 color: #edf5e1;
 font-size:3em;
-background-color: #92a8d1;
 }
 
+
+.blockmod {
+	display: flex;
+  align-items: flex-start;
+}
+.text {
+padding:0;
+	margin:auto;
+	background-color: #379683;
+	flex-grow:.93;
+}
+.media {
+	border-width: .5em;
+  border-style: solid;
+  border-color: #379683;
+height:50vh;
+padding: -1em;
+}
+.media2 {
+	border-width: .5em;
+  border-style: solid;
+  border-color: #379683;
+padding: -1em;
+
+}
+.arrow{
+align-self: center;
+
+
+}
 p {
 font-size:1.3em;
-width:800px;
 color: #edf5e1;
-margin-left:20px;
-margin-bottom:30px;
-background-color: #379683;
-border-width: 2px;
-  border-style: solid;
-  border-color: #05386B;
-  display:inline-block;
+margin:.5em;
+
+
 }
 
-img, video {  
-	border-width: 6px;
-  border-style: solid;
-  border-color: #05386B;
-height:50vh;
-margin-right:2px;
-margin-left:2px;
-padding: 0px,0px,0px,0px;
-display:inline-block;
-  }
 
+
+.top {
+overflow:hidden;
+margin:-1em;
+padding-top:1.2em;
+padding-left:1.2em;
+padding-right:.5em;
+padding-bottom:1.1em;
+font-size:xx-large;
+font-family: Arial, Helvetica, sans-serif;
+color:white;
+}
+
+.innerdiv {
+background-image: url("gradient_bg2.png");
+  background-repeat: repeat-x;
+  background-color: #5CDB95;
+  margin-left:1em;
+  margin-right:1em;
+}
 
   </style>
     <meta charset="UTF-8">
@@ -44,57 +81,157 @@ display:inline-block;
 
   </head>
   <body>
-	<h1>Aidan Bell's Project Gallery</h1>
-		<br>
+	<div class = "top">Aidan Bell's Project Gallery</div>
+		
 		
 
-<p>
-todo: gather pics for in search of utopia
-edit shanerlab end doc
-add top banner thing
-switch up ordering of text + images
-maybe add arrow thing
-</p>
-<img src="res/videoskipper.jpg">
-<p><strong>YHack 2021 videoSkipper program</strong><br>blah</p>
-<div></div>
-
-<img src="res/hc4.jpg"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Update: Flavor text and blocking animations have been added. <a href="https://t.co/wVEPZCZMHb">pic.twitter.com/wVEPZCZMHb</a></p>&mdash; Bixels (@BixelsWixels) <a href="https://twitter.com/BixelsWixels/status/1355379171594174475?ref_src=twsrc%5Etfw">January 30, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p><strong>Homecooked Game</strong><br>blah</p>
-<div></div>
-
-<img src="res/oser1.jpg"><img src="res/oser2.jpg">
-<p><strong>OSER assay automation program</strong><br>blah</p>
-<div></div>
-<img src="res/photobleach.jpg">
-<p><strong>photobleach program</strong><br>blah</p>
-<div></div>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/5JaGaa2Sq8Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<p><strong>neural networks in minecraft</strong><br>blah</p>
-<div></div>
+<div class = "innerdiv">
 
 
-
-
-<img src="res/robot2020.jpg">
-<p><strong>2020 griffins robot</strong><br>blah</p>
-<div></div>
-<p>
-2019 griffins robot
-
-</p>
-<p>
-in search of utopia
+<p style="padding-top:1em; padding-left:1em;">
+Welcome to my project gallery! <br></br>
 </p>
 
+<div class = "blockmod">
+	<img class="media" src="res/videoskipper.jpg">
+	<div class = "text">
+		<div class = "blockmod">
+			<p><strong style="text-decoration: underline;">YHack 2021 videoSkipper program</strong><br>Designed & programmed a video player in Python that automatically skips forward in the video when there is silence in real time. I also included other standard video player options, such as skipping with arrow keys or changing the speed of the video. This program helps students watch lecture videos more efficiently. 
+				<a href ="https://devpost.com/software/video-skipper-player"> devpost.com/software/video-skipper-player </a>
+			</p>
+			<img class="arrow" src="arrow2.png">
+		</div>
+	</div>
+</div>
 
 
-<video  controls>
+<div class = "blockmod" style="margin-top:-12%; padding-top: 8em;">
+	<div class = "text">
+		<div class = "blockmod">
+			<img class="arrow" src="arrow.png">
+			<p><strong style="text-decoration: underline;">Neural networks in minecraft</strong><br>I made a functioning machine learning network in vanilla Minecraft using commands (it's actually a datapack).
+			The network actually learns inside of Minecraft!
+			In this video I also attempt to explain the basics of neural networks and backpropogation without calculus.</p>
+		</div>
+	</div>
+	<iframe class="media" style="width:100vw;"  src="https://www.youtube.com/embed/5JaGaa2Sq8Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
+
+<p style="text-decoration: underline; background-color: #379683; display:inline; border:6px solid #379683; margin-left:0px; padding-right:.5em;" ><strong>
+Homecooked video game
+</strong></p>
+<div class = "text">
+	<div class = "blockmod">
+		<p>Since the beginning of quarrantine in 2020, I've been the lead software developer for the indie game Homecooked. Homecooked is a cooking-themed fantasy role playing game featuring original animations and music.
+		It's been amazing to work with a team of 10 incredibly talented artists, writers, and musicians. The game is programmed in Gamemaker studio 2, and one of our demos is available here: <a href = "https://homecookeddev.itch.io/homecookeddemo"> homecookeddev.itch.io/homecookeddemo </a> </p>
+	</div>
+	<div class = "blockmod">
+		<img class="media2" style="width:60vw;" src="res/hc4.jpg">
+		<div style="width:30vw;">
+		<blockquote class="twitter-tweet" ><p lang="en" dir="ltr">Update: Flavor text and blocking animations have been added. <a href="https://t.co/wVEPZCZMHb">pic.twitter.com/wVEPZCZMHb</a></p>&mdash; Bixels (@BixelsWixels) <a href="https://twitter.com/BixelsWixels/status/1355379171594174475?ref_src=twsrc%5Etfw">January 30, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+	</div>
+	<br>
+</div>
+
+<br></br><br></br>
+
+
+
+
+
+
+<div class = "blockmod"style="margin-top:-9%; padding-top: 8em;">
+
+<video class="media"  controls>
   <source src="res/muse.mp4" type="video/mp4">
-Your browser does not support the video tag.
+  Your browser does not support the video tag.
 </video>
-<p><strong>Hacking a muse EEG headset using ML to play breakout!</strong><br>I hacked a muse EEG meditation headset so I could use ML to recognize patterns in raw EEG data. After hours of trying to directly connect the headband to my computer, I eventually found an app that could reliably connect to the headset and send data over OSC, and then I hacked a c# OSC receiver program on my computer to write to a file that a python program could then pull the live data from. Once I got the live data into python, I just had to record the raw EEG data while performing various actions. With only around 15 minutes worth of training data (broken up to produce around 15,000 training samples, each with 120 previous values for each of the 4 eeg channels), and a relatively simple multilayer perceptron (480 inputs, 128, 128, 3 output), I had 99% accuracy detecting left clenched, right clenched, and unclenched jaw states, and 75% accuracy detecting thinking (and looking) up, down, or straight. In the video, I’m clenching my left or right jaw to control a game of Atari breakout. </p>
+<div class = "text"><p><strong style="text-decoration: underline;">Using machine learning to play atari breakout with my mind!</strong>
+<br>I hacked a muse EEG meditation headset so I could use ML to recognize patterns in raw EEG data. After hours of trying to directly connect the headband to my computer, I eventually found an app that could reliably connect to the headset and send data over OSC, and then I hacked a c# OSC receiver program on my computer to write to a file that a python program could then pull the live data from. Once I got the live data into python, I just had to record the raw EEG data while performing various actions. With only around 15 minutes worth of training data (broken up to produce around 15,000 training samples, each with 120 previous values for each of the 4 eeg channels), and a relatively simple multilayer perceptron (480 inputs, 128, 128, 3 output), I had 99% accuracy detecting left clenched, right clenched, and unclenched jaw states, and 75% accuracy detecting thinking (and looking) up, down, or straight. In the video, I’m clenching my left or right jaw to control a game of Atari breakout.
+<a href ="https://devpost.com/software/video-skipper-player"> devpost.com/software/video-skipper-player </a>
+</p></div>
+</div>
+
+<br>
+<div class = "blockmod">
+	<div class = "text">
+		<div class = "blockmod">
+			<img class="arrow" src="arrow.png">
+			<p><strong style="text-decoration: underline;">photobleach program</strong><br>
+				Designed & programmed a video player in Python that automatically skips forward in the video when there is silence in real time. I also included other standard video player options, such as skipping with arrow keys or changing the speed of the video. This program helps students watch lecture videos more efficiently. 
+				<a href ="https://devpost.com/software/video-skipper-player"> devpost.com/software/video-skipper-player </a>
+			</p>
+		</div>
+	</div>
+	<img class="media" src="res/photobleach.jpg">
+</div>
+
+
+<br>
+<div class = "blockmod">
+	<img class="media" src="res/oser1.jpg"><img class="media" src="res/oser2.jpg">
+	<div class = "text">
+		<div class = "blockmod">
+			<p><strong style="text-decoration: underline;">OSER assay automation program</strong><br>
+				Designed & programmed a video player in Python that automatically skips forward in the video when there is silence in real time. I also included other standard video player options, such as skipping with arrow keys or changing the speed of the video. This program helps students watch lecture videos more efficiently. 
+				<a href ="https://devpost.com/software/video-skipper-player"> devpost.com/software/video-skipper-player </a>
+			</p>
+			<img class="arrow" src="arrow2.png">
+		</div>
+	</div>
+</div>
+
+<br>
+
+
+<p style="text-decoration: underline; background-color: #379683; display:inline; border:6px solid #379683; margin-left:0px; padding-right:.5em;" ><strong>
+Robotics
+</strong></p>
+<div class = "text">
+	<div class = "blockmod">
+		<p>I've loved helping build and design robots on my small FTC team over the last three years.  Last year, I decided to build up the framework for a mimic auto. A mimic auto saves encoder values while a human is driving, and then plays those values back so that the robot can drive itself. From the saved encoder values we calculated the robot's change in x, y, and rotation in between each data point. The recorded x,y, and rotation then became setpoints for our control system. Using this method, we were able to get smooth curves into our auto, and we ended up having one of the highest scoring and most consistent autos in all of the San Diego region. In the video, our robot is the one on the left with the number 10092. This year we decided to start from scratch and pursue a global field tracking system, favoring drawing points in a program over recordings. This makes adjusting the auto path afterwards much easier. </p>
+	</div>
+	<div class = "blockmod">
+		<video style="width:50vw;" controls>
+		  <source src="res/ftc.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+		<img class="media2" style="width:40vw;" src="res/robot2020.jpg">
+	</div>
+	
+	<p style="margin-top:-.5em"> ^ this video is sped up 2x, our robot is #10092, on the left side of the screen </p>
+	<br>
+</div>
+
+<br>
+<p style="text-decoration: underline; background-color: #379683; display:inline; border:6px solid #379683; margin-left:0px; padding-right:.5em;" ><strong>
+In search of utopia
+</strong></p>
+<div class = "text">
+	<div class = "blockmod">
+		<p>I've loved helping build and design robots on my small FTC team over the last three years.  Last year, I decided to build up the framework for a mimic auto. A mimic auto saves encoder values while a human is driving, and then plays those values back so that the robot can drive itself. From the saved encoder values we calculated the robot's change in x, y, and rotation in between each data point. The recorded x,y, and rotation then became setpoints for our control system. Using this method, we were able to get smooth curves into our auto, and we ended up having one of the highest scoring and most consistent autos in all of the San Diego region. In the video, our robot is the one on the left with the number 10092. This year we decided to start from scratch and pursue a global field tracking system, favoring drawing points in a program over recordings. This makes adjusting the auto path afterwards much easier. </p>
+	</div>
+	<div class = "blockmod">
+		<img class="media2" style="width:30vw;" src="res/utopia_planet.gif">
+		<img class="media2" style="width:30vw;" src="res/utopia-cyclops.gif">
+		<img class="media2" style="width:30vw;" src="res/utopia-city.gif">
+	</div>
+	
+	<p style="margin-top:-.5em"> ^ this video is sped up 2x, our robot is #10092, on the left side of the screen </p>
+	<br>
+</div>
+
+<br>
+
+
+
+
+
+
 <div></div>
 <video  controls>
   <source src="res/bopit.mp4" type="video/mp4">
@@ -128,28 +265,11 @@ Your browser does not support the video tag.
 </video>
 <p><strong>American units chrome extension</strong><br>I don't know why, but I think it's really funny when science documentaries or other media say stuff like "the largest blue whales are one third the length of a football field". I thought it would be hilarious to use football fields as a unit for everything, so I wrote a chrome extension that converts all units to football fields (even volume!). I had a lot of fun with this project, and I learned a lot about JavaScript and Regular Expressions. </p>
 <div></div>
-<video  controls>
-  <source src="res/hover.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<p><strong>Science Olympiad Hovercraft 2018</strong><br>My partner and I went through so many iterations on this hovercraft. Getting the skirt just right and orienting the main downward facing fan were challenging. We realized that an upside down cup actually helps the hovercraft float, even though it reduces airflow to the fan, because it helps the fan maintain a high pressure environment under the craft. This is a video of us testing the hovercraft on water after the competition. It worked! We ended up placing 7th. </p>
-<div></div>
-<video  controls>
-  <source src="res/wrightstuff.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<p><strong>Wright Stuff SciOly 2019</strong><br>This Science Olympiad event was absolutely nerve racking. The goal is to keep a rubber band powered glider in the air for as long as possible. I built a balsa wood glider with two wings, and designed it to constantly turn to the left so that it wouldn't hit a wall in the indoor testing room. We had two trials, and in the first trial I messed up the throw. As you can see in the video, the plane crashed right into the ground. My partner and I had three minutes to super glue the entire plane back together, and somehow the plane flew better than it ever had before. It was in the air for 110 seconds, something I'm really proud of! We were technically disqualified because we missed our competition time slot, but the judges let us fly our plane anyways. We might have had the best flight time at the event, but because we lost points from being disqualified we only got 11th out of ~ 80 teams.</p>
-<div></div>
-<video  controls>
-  <source src="res/ftc.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<p><strong>FTC Autonomous code</strong><br>I've loved helping build and design robots on my small FTC team over the last three years.  Last year, I decided to build up the framework for a mimic auto. A mimic auto saves encoder values while a human is driving, and then plays those values back so that the robot can drive itself. From the saved encoder values we calculated the robot's change in x, y, and rotation in between each data point. The recorded x,y, and rotation then became setpoints for our control system. Using this method, we were able to get smooth curves into our auto, and we ended up having one of the highest scoring and most consistent autos in all of the San Diego region. In the video, our robot is the one on the left with the number 10092. This year we decided to start from scratch and pursue a global field tracking system, favoring drawing points in a program over recordings. This makes adjusting the auto path afterwards much easier. </p>
-<div></div>
 
-<img src="gokart.jpg">
-<p><strong>Go Kart project!</strong><br>My friend and I built this custom Go Kart last summer. It was a lot of fun!</p>
-<div></div>
+
+
+
+
 
 
 <img src="shanerlab2.jpg"> <img src="solarsim.jpg">
@@ -160,10 +280,11 @@ Your browser does not support the video tag.
 	<p>Here's a game I made in 10th grade with two friends for a creative english project. You use the arrow keys to move, and the enter key to talk to people. I made it to allow players to understand, firsthand, how easily we warp our values to be agreeable with others, and how easy it is to loose yourself in a group setting</p>
 	<br>
 	<p> <a href="cattack.html">Here's a link to another game I made.</a> It's linked because it automatically plays sounds and I didn't want you to be bombarded with music when you opened this page :)</p>
-  	<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/664350341&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-	<p> Here's a short song I wrote and produced in FL studio :) </p>
-	<div></div>
+
 	<iframe src="res/shanerlab.pdf" height=800 width=600></iframe>
 	<p>Here is more detail about the projects I took on at the Shaner Lab over the last 3 years.</p>
+	
+	
+</div>
 </body>
 </html>
