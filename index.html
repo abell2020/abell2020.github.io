@@ -74,6 +74,33 @@ background-image: url("gradient_bg2.png");
   margin-left:1em;
   margin-right:1em;
 }
+.innerdiv2 {
+  background-color: #5CDB95;
+  margin-left:1em;
+  margin-right:1em;
+}
+strong {
+font-size: x-large;
+}
+.navbar {
+color:black;
+padding-right:.5em;
+padding-left:.5em;
+margin-left:.1em;
+margin-right:.1em;
+}
+a.nav{
+color:black;
+text-decoration: none;
+}
+.navbar:hover {
+background-color:#5CDB95;
+border-top: 2.5em solid #5CDB95;
+margin-top:-1.85em;
+border-bottom: 1.3em solid #5CDB95;
+margin-bottom:-1.05em;
+padding-right:
+}
 
   </style>
     <meta charset="UTF-8">
@@ -81,22 +108,28 @@ background-image: url("gradient_bg2.png");
 
   </head>
   <body>
+	
+	<div class = "blockmod">
 	<div class = "top">Aidan Bell's Project Gallery</div>
-		
+	
+	<a href="#j1" class="nav" style="margin-left:auto;" ><p class="navbar" >General Projects</p></a>
+	<a href="#j2" class="nav"><p class="navbar">Bioinformatics Projects</p></a>
+	<a href="#j3" class="nav"><p class="navbar">Video Game Projects</p></a>
+	</div>
 		
 
 <div class = "innerdiv">
 
 
 <p style="padding-top:1em; padding-left:1em;">
-Welcome to my project gallery! <br></br>
+Welcome to my project gallery! This website is a collection of some of my favorite projects over the years. Enjoy perusing them! <br></br>
 </p>
-
+<div id="j1"></div>
 <div class = "blockmod">
 	<img class="media" src="res/videoskipper.jpg">
 	<div class = "text">
 		<div class = "blockmod">
-			<p><strong style="text-decoration: underline;">YHack 2021 videoSkipper program</strong><br>Designed & programmed a video player in Python that automatically skips forward in the video when there is silence in real time. I also included other standard video player options, such as skipping with arrow keys or changing the speed of the video. This program helps students watch lecture videos more efficiently. 
+			<p><strong style="text-decoration: underline;">YHack 2021 videoSkipper program</strong><br>I Designed & programmed a video player in Python that automatically skips forward in the video when there is silence in real time. I also included other standard video player options, such as skipping with arrow keys or changing the speed of the video. This program helps students watch lecture videos more efficiently. 
 				<a href ="https://devpost.com/software/video-skipper-player"> devpost.com/software/video-skipper-player </a>
 			</p>
 			<img class="arrow" src="arrow2.png">
@@ -105,17 +138,211 @@ Welcome to my project gallery! <br></br>
 </div>
 
 
-<div class = "blockmod" style="margin-top:-12%; padding-top: 8em;">
+<div class = "blockmod" style="margin-top:-14%; padding-top: 8em;">
 	<div class = "text">
 		<div class = "blockmod">
 			<img class="arrow" src="arrow.png">
-			<p><strong style="text-decoration: underline;">Neural networks in minecraft</strong><br>I made a functioning machine learning network in vanilla Minecraft using commands (it's actually a datapack).
-			The network actually learns inside of Minecraft!
-			In this video I also attempt to explain the basics of neural networks and backpropogation without calculus.</p>
+			<p><strong style="text-decoration: underline;">Neural networks in minecraft</strong><br>I made a functioning machine learning network in vanilla Minecraft using commands.
+			The network learns completely inside of Minecraft, and you can actually build a neural network using minecraft blocks!
+<br>			
+			Being able to build and experiment with networks in 3d space feels so natural and intuitive.
+			In the youtube video I made about this project, I attempt to explain the basics of neural networks and backpropogation without calculus.</p>
 		</div>
 	</div>
 	<iframe class="media" style="width:100vw;"  src="https://www.youtube.com/embed/5JaGaa2Sq8Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+
+
+<div class = "blockmod"style="margin-top:-9%; padding-top: 8em;">
+
+<video class="media"  controls>
+  <source src="res/muse.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<div class = "text"><p><strong style="text-decoration: underline;">Using machine learning to play atari breakout with my mind!</strong>
+<br>I hacked a muse EEG meditation headset so I could use ML to recognize patterns in raw EEG data. After hours of trying to directly connect the headband to my computer, I eventually found an app that could reliably connect to the headset and send data over OSC, and then I hacked a c# OSC receiver program on my computer to write to a file that a python program could then pull the live data from. Once I got the live data into python, I just had to record the raw EEG data while performing various actions. With only around 15 minutes worth of training data (broken up to produce around 15,000 training samples, each with 120 previous values for each of the 4 eeg channels), and a relatively simple multilayer perceptron (480 inputs, 128, 128, 3 output), I had 99% accuracy detecting left clenched, right clenched, and unclenched jaw states, and 75% accuracy detecting thinking (and looking) up, down, or straight. In the video, I’m clenching my left or right jaw to control a game of Atari breakout.
+<a href ="https://devpost.com/software/video-skipper-player"> devpost.com/software/video-skipper-player </a>
+</p></div>
+</div>
+
+<br>
+<p style="text-decoration: underline; background-color: #379683; display:inline; border:6px solid #379683; margin-left:0px; padding-right:.5em;" ><strong>
+Robotics
+</strong></p>
+<div class = "text">
+	<div class = "blockmod">
+		<p>
+		I have hundreds of hours of software development and control systems experience through robotics, both FRC and FTC. I learned how to effectively (and how easy it is to innefectively) collaborate on software, and I got to work with some incredibly talented student and mentor programmers.
+		I was the software lead for three years on my FTC team, and below are our 2019 (left) and 2020 (right) robots.
+		<br><br>
+		In 2019, I designed a program that saves encoder values while a human is driving, and then plays those values back so that the robot can drive itself. From the saved encoder values we calculated the robot's change in x, y, and rotation in between each data point. The recorded x,y, and rotation then became setpoints for our control system. Using this method, we were able to get smooth curves into our auto, and we ended up having one of the highest scoring and most consistent autos in all of the San Diego region. 
+	 </p>
+	</div>
+	<div class = "blockmod">
+		<video style="width:50vw;" controls>
+		  <source src="res/ftc.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+		<img class="media2" style="width:40vw;" src="res/robot2020.jpg">
+	</div>
+	
+	<p style="margin-top:-.5em"> ^ this video is sped up 2x, our robot is #10092, on the left side of the screen </p>
+	<br>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<div id="j2" style="text-align: center; font-size:xx-large; color:black; background-color: #3BAAD8"><p>Bioinformatics Projects</p></div>
+
+
+
+
+<div class = "blockmod">
+	<div class = "text">
+		<div class = "blockmod">
+			<img class="arrow" src="arrow.png">
+			<p><strong style="text-decoration: underline;">Cell Photobleach Analysis Program</strong><br>
+				Over the summer of 2021, I wrote a program in python using ImageJ and TrackMate to automatically identify & track cells from a fluorescence 
+				microscopy video and plot their brightness over time. We use this program to quantify how quickly different fluorescent proteins photobleach, and we also
+				occasionally use it for photoswitching fluorescent proteins.
+				
+				
+			</p>
+		</div>
+	</div>
+	<img class="media" src="res/photobleach.jpg">
+</div>
+
+
+<br>
+<div class = "blockmod">
+	<img class="media" src="res/oser1.jpg"><img class="media" src="res/oser2.jpg">
+	<div class = "text">
+		<div class = "blockmod">
+			<p><strong style="text-decoration: underline;">OSER assay automation program</strong><br>
+				With a coworker, I wrote software to automate the OSER assay (an assay designed to measure wether fluorescent proteins interact with themselves and disrupt cell function),
+				a critical assay for fluorescent proteins before they are published. The software features UIs, clean data output, and undo functionality, and is designed to process hundreds of images as quickly as possible.
+				
+			</p>
+			<img class="arrow" src="arrow2.png">
+		</div>
+	</div>
+</div>
+
+<br>
+
+
+<p style="text-decoration: underline; background-color: #379683; display:inline; border:6px solid #379683; margin-left:0px; padding-right:.5em;" ><strong>
+Camera-based colony screening software aid
+</strong></p>
+<div class = "text">
+	<div class = "blockmod">
+	<p>
+	I wrote software for the low light camera our lab recently acquired, that allows us to quickly quantitatively screen for brightness (that previously was done by eye), and to screen for other traits that were previously impossible. The software detects the boundaries of all of the colonies based on the input images, and then ranks the colonies based on a user-defined equation. For example, the program can compare the before and after states of photoswitching proteins and select the colonies that changed the most, or select for bioluminescent proteins that use up the substrate quickly.
+	</p>
+	</div>
+	<div class = "blockmod">
+		<img class="media2" style="width:40vw;" src="res/screen1.jpg">
+		<img class="media2" style="width:45vw;" src="res/screen2.PNG">
+		
+	</div>
+	<p>
+		
+
+		Once the colonies have been ranked, the results are displayed on an iPad mini, so that the user can easily pick the right colonies by putting the plate on top of it.
+
+		I ended up having to use three different programming languages, one scripting language to control the filter wheels and camera, the imageJ macro language to do the vision processing, and java to make the GUIs.
+
+		</p>
+	
+	<div class = "blockmod">
+		<img class="media2" style="width:50vw;" src="res/screen4.jpg">
+		<img class="media2" style="width:30vw;" src="res/screen3.PNG">
+	</div>
+	<br>
+</div>
+
+
+
+
+<div id="j3" style="text-align: center; font-size:xx-large; color:black; background-color: #3BAAD8"><p>Video Game Projects</p></div>
+
+<div style="margin-left:1em; margin-right:1em;">
+<p style="text-decoration: underline; background-color: #379683; display:inline; border:6px solid #379683; margin-left:0px; padding-right:.5em;" ><strong>
+In Search of Utopia
+</strong></p>
+<div class = "text">
+	<div class = "blockmod">
+		<p>
+		When quarrantine started, I saw it as an opportunity to make the game I had been thinking about forever: in search of utopia. 
+		In search of utopia is set in the far future where humans have colonized the cosmos, and people have created various utopian and dystopian societies.
+		The idea of the game is to present different utopian ideals fully fleshed out in a civilization, and to allow the player to explore and interact with strange societies and decide for themselves which, if any, utopia they want to settle down in.
+		</p></div><p>
+		So far, I've fleshed out one utopian planet, an underwater science-oriented civilization that uses genetic constructs for labor and heavily uses full-dive and AI technology.
+		</p><p>
+		I created original pixel art, animations, music, and dialouge for the game. I coded the game in GameMaker studio 2
+		</p>
+		
+	<div class = "blockmod">
+		<img class="media2" style="width:30vw;" src="res/utopia_planet.gif">
+		<img class="media2" style="width:30vw;" src="res/utopia-cyclops.gif">
+		<img class="media2" style="width:30vw;" src="res/utopia-city.gif">
+	</div>
+	
+	<br>
+</div>
+
+</div>
+<div class = "innerdiv2">
+<br><br><br><br><br>
+
+
+<div class = "blockmod" style="margin-top:-12%; padding-top: 8em;">
+	<div class = "text">
+		<div class = "blockmod">
+			<img class="arrow" src="arrow.png">
+			<p><strong style="text-decoration: underline;">Turning a Bop it extreme into a controller</strong><br>
+			I put the guts of an Xbox 360 controller inside a bop it! I soldered all of the buttons inside the bop it to the buttons on the Xbox controller, and mounted joysticks to the bop it. I was able to turn one of the big round bop it buttons into a joystick. It has just enough buttons to play overwatch, and to shoot you spin the wheel :p The video is a clip from a Youtube video I made. The full video is here: <a href="https://www.youtube.com/watch?v=Z8bw5sZtrDY&t=32s">https://www.youtube.com/watch?v=Z8bw5sZtrDY&t=32s</a> </p>
+			</p>
+		</div>
+	</div>
+	<video class="media"  controls>
+		<source src="res/bopit.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+</div>
+
+
+
+<div class = "blockmod"style="margin-top:-9%; padding-top: 8em;">
+
+<video class="media"  controls>
+  <source src="res/leap.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<div class = "text">
+<div class = "blockmod">
+<p><strong style="text-decoration: underline;">Playing Minecraft without a mouse using my hands!</strong>
+<br>
+I used a Leap motion hand sensor and processing to recognize hand gestures and hand position. I wrote a program that controls all the mouse functions in Minecraft, so that instead of using a mouse with your right hand you can actually do the actions. You punch to hit things, use an open hand to place things, use two fingers to look around, and one finger swiping changes item slots. 
+As you can see at the end, you can also pull your ring finger in and then turn your hand to cast spells. My processing program types commands into the Minecraft chat really fast to communicate with the Minecraft mod I wrote for the spellcasting. So far you can teleport, and shoot fireballs and lightning! </p>
+
+</p>
+<img class="arrow" src="arrow2.png">
+</div>
+</div>
+</div>
+<br>
 
 
 
@@ -137,153 +364,54 @@ Homecooked video game
 	<br>
 </div>
 
-<br></br><br></br>
 
+<br><br><br><br><br>
 
-
+<div class = "blockmod" style="margin-top:-12%; padding-top: 8em;">
+	<div class = "text">
+		<div class = "blockmod">
+			<img class="arrow" src="arrow.png">
+			<p><strong style="text-decoration: underline;">Ben 10 Minecraft Mod</strong><br>
+				I’ve made dozens of mods, but the series I made about recreating ben 10 aliens was the most popular. The project ended up spanning several years with several complete rebuilds from the ground up (after I had learned more about modding, I wanted to reorganize the code to optimize it, and updates came out for Minecraft that changed stuff). The code is thousands of lines long, and I designed many of the 3d models, animations, and sound effects myself. I collaborated with other creators to make some of the models, because this was such a huge project. This version of my mod allows players to make an Omnitrix (the device from Ben 10 that allows you to shapeshift) and use it to transform into 10 unique aliens. This is a clip from one of my YouTube videos about the mod, and you can find the full video here: <a href="https://www.youtube.com/watch?v=MVKIs3semYc&t=944s">https://www.youtube.com/watch?v=MVKIs3semYc&t=944s</a><br>
+				This mod ended up getting showcased by numerous other YouTubers, many with well over 1 million subscribers
+			</p>
+		</div>
+	</div>
+	<video class="media"  controls>
+		<source src="res/ben10.mp4" type="video/mp4">
+		Your browser does not support the video tag.
+	</video>
+</div>
 
 
 
 <div class = "blockmod"style="margin-top:-9%; padding-top: 8em;">
 
 <video class="media"  controls>
-  <source src="res/muse.mp4" type="video/mp4">
+  <source src="res/vocab.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-<div class = "text"><p><strong style="text-decoration: underline;">Using machine learning to play atari breakout with my mind!</strong>
-<br>I hacked a muse EEG meditation headset so I could use ML to recognize patterns in raw EEG data. After hours of trying to directly connect the headband to my computer, I eventually found an app that could reliably connect to the headset and send data over OSC, and then I hacked a c# OSC receiver program on my computer to write to a file that a python program could then pull the live data from. Once I got the live data into python, I just had to record the raw EEG data while performing various actions. With only around 15 minutes worth of training data (broken up to produce around 15,000 training samples, each with 120 previous values for each of the 4 eeg channels), and a relatively simple multilayer perceptron (480 inputs, 128, 128, 3 output), I had 99% accuracy detecting left clenched, right clenched, and unclenched jaw states, and 75% accuracy detecting thinking (and looking) up, down, or straight. In the video, I’m clenching my left or right jaw to control a game of Atari breakout.
-<a href ="https://devpost.com/software/video-skipper-player"> devpost.com/software/video-skipper-player </a>
-</p></div>
-</div>
-
-<br>
-<div class = "blockmod">
-	<div class = "text">
-		<div class = "blockmod">
-			<img class="arrow" src="arrow.png">
-			<p><strong style="text-decoration: underline;">photobleach program</strong><br>
-				Designed & programmed a video player in Python that automatically skips forward in the video when there is silence in real time. I also included other standard video player options, such as skipping with arrow keys or changing the speed of the video. This program helps students watch lecture videos more efficiently. 
-				<a href ="https://devpost.com/software/video-skipper-player"> devpost.com/software/video-skipper-player </a>
-			</p>
-		</div>
-	</div>
-	<img class="media" src="res/photobleach.jpg">
-</div>
-
-
-<br>
-<div class = "blockmod">
-	<img class="media" src="res/oser1.jpg"><img class="media" src="res/oser2.jpg">
-	<div class = "text">
-		<div class = "blockmod">
-			<p><strong style="text-decoration: underline;">OSER assay automation program</strong><br>
-				Designed & programmed a video player in Python that automatically skips forward in the video when there is silence in real time. I also included other standard video player options, such as skipping with arrow keys or changing the speed of the video. This program helps students watch lecture videos more efficiently. 
-				<a href ="https://devpost.com/software/video-skipper-player"> devpost.com/software/video-skipper-player </a>
-			</p>
-			<img class="arrow" src="arrow2.png">
-		</div>
-	</div>
-</div>
-
-<br>
-
-
-<p style="text-decoration: underline; background-color: #379683; display:inline; border:6px solid #379683; margin-left:0px; padding-right:.5em;" ><strong>
-Robotics
-</strong></p>
 <div class = "text">
-	<div class = "blockmod">
-		<p>I've loved helping build and design robots on my small FTC team over the last three years.  Last year, I decided to build up the framework for a mimic auto. A mimic auto saves encoder values while a human is driving, and then plays those values back so that the robot can drive itself. From the saved encoder values we calculated the robot's change in x, y, and rotation in between each data point. The recorded x,y, and rotation then became setpoints for our control system. Using this method, we were able to get smooth curves into our auto, and we ended up having one of the highest scoring and most consistent autos in all of the San Diego region. In the video, our robot is the one on the left with the number 10092. This year we decided to start from scratch and pursue a global field tracking system, favoring drawing points in a program over recordings. This makes adjusting the auto path afterwards much easier. </p>
-	</div>
-	<div class = "blockmod">
-		<video style="width:50vw;" controls>
-		  <source src="res/ftc.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
-		<img class="media2" style="width:40vw;" src="res/robot2020.jpg">
-	</div>
-	
-	<p style="margin-top:-.5em"> ^ this video is sped up 2x, our robot is #10092, on the left side of the screen </p>
-	<br>
+<div class = "blockmod">
+<p><strong style="text-decoration: underline;">Vocabulary.com chrome extension bot</strong>
+<br>
+This is a chrome extension I wrote that automatically does Vocabulary.com questions. I was poking around the site's HTML, and noticed that some of the questions had hard coded in answers, so I couldn't help myself. At the time, I knew nothing about chrome extensions or JavaScript, so I spent the next three months learning and working on this project. For the multiple choice questions, the code actually scrapes Vocabulary.com's definition page for a word, and then determines if any of the answers are found in the definition page. The fill in the blank questions have the answers in the HTML, so they're easy. The program gets the right answer about 80% of the time, which I'm really happy with. It just automates all of the clicks, and it can actually click behind the timeout Vocabulary.com added to try to stop you from going too fast :) </p>
+
+</p>
+<img class="arrow" src="arrow2.png">
+</div>
+</div>
+</div>
 </div>
 
-<br>
-<p style="text-decoration: underline; background-color: #379683; display:inline; border:6px solid #379683; margin-left:0px; padding-right:.5em;" ><strong>
-In search of utopia
-</strong></p>
-<div class = "text">
-	<div class = "blockmod">
-		<p>I've loved helping build and design robots on my small FTC team over the last three years.  Last year, I decided to build up the framework for a mimic auto. A mimic auto saves encoder values while a human is driving, and then plays those values back so that the robot can drive itself. From the saved encoder values we calculated the robot's change in x, y, and rotation in between each data point. The recorded x,y, and rotation then became setpoints for our control system. Using this method, we were able to get smooth curves into our auto, and we ended up having one of the highest scoring and most consistent autos in all of the San Diego region. In the video, our robot is the one on the left with the number 10092. This year we decided to start from scratch and pursue a global field tracking system, favoring drawing points in a program over recordings. This makes adjusting the auto path afterwards much easier. </p>
-	</div>
-	<div class = "blockmod">
-		<img class="media2" style="width:30vw;" src="res/utopia_planet.gif">
-		<img class="media2" style="width:30vw;" src="res/utopia-cyclops.gif">
-		<img class="media2" style="width:30vw;" src="res/utopia-city.gif">
-	</div>
-	
-	<p style="margin-top:-.5em"> ^ this video is sped up 2x, our robot is #10092, on the left side of the screen </p>
-	<br>
-</div>
 
-<br>
+<br></br>
 
 
 
 
 
 
-<div></div>
-<video  controls>
-  <source src="res/bopit.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<p><strong>Turning a Bop it extreme into a controller</strong><br>Inspired by people playing video games with baguettes and pineapples online, I thought it would be ridiculously funny to play video games using a bop it. So, over Christmas break of 2018, I put the guts of an Xbox 360 controller inside a bop it! I soldered all of the buttons inside the bop it to the buttons on the Xbox controller, and mounted joysticks to the bop it. It was extremely difficult, but I turned one of the big round bop it buttons into a joystick.  I tried to preserve the bop it functionality, but sadly I had to remove the bop it circuit boards to make everything fit inside. I drove my FTC and FRC robots around with it for fun, and of course, I played video games with it. It has just enough buttons to play overwatch, and to shoot you spin the wheel :p The video is a clip from a Youtube video I made about the bop it. The full video is here: <a href="https://www.youtube.com/watch?v=Z8bw5sZtrDY&t=32s">https://www.youtube.com/watch?v=Z8bw5sZtrDY&t=32s</a> </p>
-<div></div>
-<video  controls>
-  <source src="res/leap.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<p><strong>Playing Minecraft without a mouse using my hands!</strong><br>I used a Leap motion hand sensor and processing to recognize hand gestures and hand position. I wrote a program that controls all the mouse functions in Minecraft, so that instead of using a mouse with your right hand you can actually do the actions. You punch to hit things, use an open hand to place things, use two fingers to look around, and one finger swiping changes item slots. As you can see at the end, you can also pull your ring finger in and then turn your hand to cast spells. My processing program types commands into the Minecraft chat really fast to communicate with the Minecraft mod I wrote for the spellcasting. So far you can teleport, and shoot fireballs and lightning! </p>
-<div></div>
-<video  controls>
-  <source src="res/ben10.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<p><strong>Ben 10 Minecraft Mod</strong><br>I’ve made dozens of mods, but the series I made about recreating ben 10 aliens was the most popular. The project ended up spanning several years with several complete rebuilds from the ground up (after I had learned more about modding, I wanted to reorganize the code to optimize it, and updates came out for Minecraft that changed stuff). The code is thousands of lines long, and I designed many of the 3d models, animations, and sound effects myself. I collaborated with other creators to make some of the models, because this was such a huge project. This version of my mod allows players to make an Omnitrix (the device from Ben 10 that allows you to shapeshift) and use it to transform into 10 unique aliens. This is a clip from one of my YouTube videos about the mod, and you can find the full video here: <a href="https://www.youtube.com/watch?v=MVKIs3semYc&t=944s">https://www.youtube.com/watch?v=MVKIs3semYc&t=944s</a><br>
-
-This mod ended up getting showcased by numerous other YouTubers, many with well over 1 million subscribers </p>
-<div></div>
-<video  controls>
-  <source src="res/vocab.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<p><strong>Vocabulary.com chrome extension bot</strong><br>This is a chrome extension I wrote that automatically does Vocabulary.com questions. I was poking around the site's HTML, and noticed that some of the questions had hard coded in answers, so I couldn't help myself. At the time, I knew nothing about chrome extensions or JavaScript, so I spent the next three months learning and working on this project. For the multiple choice questions, the code actually scrapes Vocabulary.com's definition page for a word, and then determines if any of the answers are found in the definition page. The fill in the blank questions have the answers in the HTML, so they're easy. The program gets the right answer about 80% of the time, which I'm really happy with. It just automates all of the clicks, and it can actually click behind the timeout Vocabulary.com added to try to stop you from going too fast :) </p>
-<div></div>
-<video  controls>
-  <source src="res/football.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<p><strong>American units chrome extension</strong><br>I don't know why, but I think it's really funny when science documentaries or other media say stuff like "the largest blue whales are one third the length of a football field". I thought it would be hilarious to use football fields as a unit for everything, so I wrote a chrome extension that converts all units to football fields (even volume!). I had a lot of fun with this project, and I learned a lot about JavaScript and Regular Expressions. </p>
-<div></div>
-
-
-
-
-
-
-
-<img src="shanerlab2.jpg"> <img src="solarsim.jpg">
-<p>Me working on my solar simulator for the shaner lab, and the finished project</p>
-<div></div>
-	
-	<iframe src="https://www.openprocessing.org/sketch/556358/embed/" width="1420" scrolling="no" height="600"></iframe>
-	<p>Here's a game I made in 10th grade with two friends for a creative english project. You use the arrow keys to move, and the enter key to talk to people. I made it to allow players to understand, firsthand, how easily we warp our values to be agreeable with others, and how easy it is to loose yourself in a group setting</p>
-	<br>
-	<p> <a href="cattack.html">Here's a link to another game I made.</a> It's linked because it automatically plays sounds and I didn't want you to be bombarded with music when you opened this page :)</p>
-
-	<iframe src="res/shanerlab.pdf" height=800 width=600></iframe>
-	<p>Here is more detail about the projects I took on at the Shaner Lab over the last 3 years.</p>
-	
 	
 </div>
 </body>
