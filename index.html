@@ -162,7 +162,7 @@ Welcome to my project gallery! This website is a collection of some of my favori
 </video>
 <div class = "text"><p><strong style="text-decoration: underline;">Using machine learning to play atari breakout with my mind!</strong>
 <br>I hacked a muse EEG meditation headset so I could use ML to recognize patterns in raw EEG data. After hours of trying to directly connect the headband to my computer, I eventually found an app that could reliably connect to the headset and send data over OSC, and then I hacked a c# OSC receiver program on my computer to write to a file that a python program could then pull the live data from. Once I got the live data into python, I just had to record the raw EEG data while performing various actions. With only around 15 minutes worth of training data (broken up to produce around 15,000 training samples, each with 120 previous values for each of the 4 eeg channels), and a relatively simple multilayer perceptron (480 inputs, 128, 128, 3 output), I had 99% accuracy detecting left clenched, right clenched, and unclenched jaw states, and 75% accuracy detecting thinking (and looking) up, down, or straight. In the video, I’m clenching my left or right jaw to control a game of Atari breakout.
-<a href ="https://devpost.com/software/video-skipper-player"> devpost.com/software/video-skipper-player </a>
+
 </p></div>
 </div>
 
