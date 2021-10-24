@@ -161,7 +161,14 @@ Welcome to my project gallery! This website is a collection of some of my favori
   Your browser does not support the video tag.
 </video>
 <div class = "text"><p><strong style="text-decoration: underline;">Using machine learning to play Atari breakout with my mind</strong>
-<br>I hacked a muse EEG meditation headset so I could use ML to recognize patterns in raw EEG data. After hours of trying to directly connect the headband to my computer, I eventually found an app that could reliably connect to the headset and send data over OSC, and then I hacked a c# OSC receiver program on my computer to write to a file that a Python program could then pull the live data from. Once I got the live data into Python, I just had to record the raw EEG data while performing various actions. With only around 15 minutes worth of training data (broken up to produce around 15,000 training samples, each with 120 previous values for each of the 4 EEG channels), and a relatively simple multilayer perceptron (480 inputs, 128, 128, 3 output), I had 99% accuracy detecting left clenched, right clenched, and unclenched jaw states, and 75% accuracy detecting thinking (and looking) up, down, or straight. In the video, I’m clenching my left or right jaw to control a game of Atari breakout.
+<br>I hacked a muse EEG meditation headset so I could use ML to recognize patterns in raw EEG data. 
+I wrote a python program that allowed me to record labeled raw EEG data while performing various actions. 
+With only around 15 minutes worth of training data (broken up to produce around 15,000 training
+ samples, each with 120 previous values for each of the 4 EEG channels), and a relatively simple 
+ multilayer perceptron (480 inputs, 128, 128, 3 output), I had 99% accuracy detecting left clenched,
+ right clenched, and unclenched jaw states, and 75% accuracy detecting thinking (and looking) up, 
+ down, or straight. In the video, I’m clenching my left or right jaw to control a game of Atari 
+ breakout.
 
 </p></div>
 </div>
@@ -176,7 +183,7 @@ Robotics
 		I have hundreds of hours of software development and control systems experience through robotics, both FRC and FTC. I learned how to effectively (and how easy it is to ineffectively) collaborate on software, and I got to work with some incredibly talented student and mentor programmers.
 		I was the software lead for three years on my FTC team, and below are our 2019 (left) and 2020 (right) robots.
 		<br><br>
-		In 2019, I designed a program that saves encoder values while a human is driving, and then plays those values back so that the robot can drive itself. From the saved encoder values we calculated the robot's change in x, y, and rotation in between each data point. The recorded x,y, and rotation then became setpoints for our control system. Using this method, we were able to get smooth curves into our autonomous (non-driver operated) period, and we ended up having one of the highest scoring and most consistent a in all of the San Diego region. 
+		In 2019, I designed a program that saves encoder values while a human is driving, and then plays those values back so that the robot can drive itself. From the saved encoder values we calculated the robot's change in x, y, and rotation in between each data point. The recorded x,y, and rotation then became setpoints for our control system. Using this method, we were able to get smooth curves into our autonomous (non-driver operated) period, and we ended up having one of the highest scoring and most consistent autonomous periods in all of the San Diego region. 
 	 </p>
 	</div>
 	<div class = "blockmod">
@@ -231,7 +238,7 @@ Robotics
 		<div class = "blockmod">
 			<p><strong style="text-decoration: underline;">OSER assay automation program</strong><br>
 				With a coworker, I wrote software to automate the OSER assay (an assay designed to measure whether fluorescent proteins interact with themselves and disrupt cell function),
-				a critical assay for fluorescent proteins before they are published. The software features UIs, clean data output, and undo functionality, and is designed to process hundreds of images as quickly as possible.
+				a critical assay for fluorescent proteins before they are published. The software features UIs, clean data output, and undo functionality, and is designed to process ~100 images per hour, whereas previously 100 images would take a technician over a week to process.
 				
 			</p>
 			<img class="arrow" src="arrow2.png">
@@ -262,7 +269,7 @@ Camera-based colony screening software
 		Once the colonies have been ranked, the results are displayed on an iPad mini, so that the user can easily pick the right colonies by putting the plate on top of it.
 
 		I ended up having to use three different programming languages, one scripting language to control the filter wheels and camera, the imageJ macro language to do the vision processing, and Java to make the GUIs.
-		<br>I was asked to write software just for photoswitching proteins, but I expanded the program so that it can screen bioluminescent, photobleaching, and standard fluorescent proteins.
+		<br>I was asked to write software just for photoswitching proteins, but I expanded the program to also screen bioluminescent, photobleaching, and standard fluorescent proteins.
 		</p>
 	
 	<div class = "blockmod">
@@ -355,7 +362,10 @@ Homecooked video game
 		<div class = "blockmod">
 			<img class="arrow" src="arrow.png">
 			<p><strong style="text-decoration: underline;">Ben 10 Minecraft Mod</strong><br>
-				I’ve made dozens of mods, but the series I made about recreating Ben 10 aliens was the most popular. The project ended up spanning several years with several complete rebuilds from the ground up (after I had learned more about modding, I wanted to reorganize the code to optimize it, and updates came out for Minecraft that changed stuff). The code is thousands of lines long, and I designed many of the 3D models, animations, and sound effects myself. I collaborated with other creators to make some of the models, because this was such a huge project. This version of my mod allows players to make an Omnitrix (the device from Ben 10 that allows you to shapeshift) and use it to transform into 10 unique aliens. This is a clip from one of my YouTube videos about the mod, and you can find the full video here: <a href="https://www.youtube.com/watch?v=MVKIs3semYc&t=944s">https://www.youtube.com/watch?v=MVKIs3semYc&t=944s</a><br>
+				I’ve made dozens of mods, but the series I made about recreating Ben 10 aliens was the 
+				most popular. The project ended up spanning several years with several complete 
+				rebuilds from the ground up. The code is thousands of lines long, and I designed many of the 3D models, animations, and sound effects myself.
+				I collaborated with other creators to make some of the models, because this was such a huge project. This version of my mod allows players to make an Omnitrix (the device from Ben 10 that allows you to shapeshift) and use it to transform into 10 unique aliens. This is a clip from one of my YouTube videos about the mod, and you can find the full video here: <a href="https://www.youtube.com/watch?v=MVKIs3semYc&t=944s">https://www.youtube.com/watch?v=MVKIs3semYc&t=944s</a><br>
 				This mod ended up getting showcased by numerous other YouTubers, many with well over 1 million subscribers
 			</p>
 		</div>
@@ -378,8 +388,8 @@ Homecooked video game
 <div class = "blockmod">
 <p><strong style="text-decoration: underline;">Vocabulary.com chrome extension bot</strong>
 <br>
-This is a chrome extension I wrote that automatically does Vocabulary.com questions. I was poking around the site's HTML, and noticed that some of the questions had hard coded in answers, so I couldn't help myself. At the time, I knew nothing about chrome extensions or JavaScript, so I spent the next three months learning and working on this project. 
-For the multiple choice questions, the code actually scrapes Vocabulary.com's definition page for a word, and then determines if any of the answers are found in the definition page. The fill in the blank questions have the answers in the HTML, so they're easy. The program gets the right answer about 80% of the time.  </p>
+This is a chrome extension I wrote that automatically answers Vocabulary.com questions. I was poking around the site's HTML, and noticed that some of the questions had hard coded in answers, so I couldn't help myself. At the time, I knew nothing about chrome extensions or JavaScript, so I spent the next three months learning and working on this project. 
+For the multiple choice questions, the code actually scrapes Vocabulary.com's definition page for a word, and then determines if any of the answers are found in the definition page. The program gets the right answer about 80% of the time.  </p>
 
 </p>
 <img class="arrow" src="arrow2.png">
