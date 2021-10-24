@@ -122,14 +122,14 @@ padding-right:
 
 
 <p style="padding-top:1em; padding-left:1em;">
-Welcome to my project gallery! This website is a collection of some of my favorite projects over the years. Enjoy perusing them! <br></br>
+Welcome to my project gallery! This website is a collection of some of my favorite projects over the years. Enjoy perusing them. <br></br>
 </p>
 <div id="j1"></div>
 <div class = "blockmod">
 	<img class="media" src="res/videoskipper.jpg">
 	<div class = "text">
 		<div class = "blockmod">
-			<p><strong style="text-decoration: underline;">YHack 2021 videoSkipper program</strong><br>I Designed & programmed a video player in Python that automatically skips forward in the video when there is silence in real time. I also included other standard video player options, such as skipping with arrow keys or changing the speed of the video. This program helps students watch lecture videos more efficiently. 
+			<p><strong style="text-decoration: underline;">YHack 2021 videoSkipper program</strong><br>I designed and programmed a video player in Python that automatically skips forward in the video when there is silence in real time. I also included other standard video player options, such as skipping with arrow keys or changing the speed of the video. This program helps students watch lecture videos more efficiently. 
 				<a href ="https://devpost.com/software/video-skipper-player"> devpost.com/software/video-skipper-player </a>
 			</p>
 			<img class="arrow" src="arrow2.png">
@@ -142,11 +142,11 @@ Welcome to my project gallery! This website is a collection of some of my favori
 	<div class = "text">
 		<div class = "blockmod">
 			<img class="arrow" src="arrow.png">
-			<p><strong style="text-decoration: underline;">Neural networks in minecraft</strong><br>I made a functioning machine learning network in vanilla Minecraft using commands.
-			The network learns completely inside of Minecraft, and you can actually build a neural network using minecraft blocks!
+			<p><strong style="text-decoration: underline;">Neural networks in Minecraft</strong><br>I made a functioning machine learning network in vanilla Minecraft using commands.
+			The network learns completely inside of Minecraft, and you can actually build a neural network using Minecraft blocks.
 <br>			
 			Being able to build and experiment with networks in 3d space feels so natural and intuitive.
-			In the youtube video I made about this project, I attempt to explain the basics of neural networks and backpropagation  without calculus.</p>
+			In the YouTube video I made about this project, I attempt to explain the basics of neural networks and backpropagation  without calculus.</p>
 		</div>
 	</div>
 	<iframe class="media" style="width:100vw;"  src="https://www.youtube.com/embed/5JaGaa2Sq8Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -160,8 +160,8 @@ Welcome to my project gallery! This website is a collection of some of my favori
   <source src="res/muse.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-<div class = "text"><p><strong style="text-decoration: underline;">Using machine learning to play atari breakout with my mind!</strong>
-<br>I hacked a muse EEG meditation headset so I could use ML to recognize patterns in raw EEG data. After hours of trying to directly connect the headband to my computer, I eventually found an app that could reliably connect to the headset and send data over OSC, and then I hacked a c# OSC receiver program on my computer to write to a file that a python program could then pull the live data from. Once I got the live data into python, I just had to record the raw EEG data while performing various actions. With only around 15 minutes worth of training data (broken up to produce around 15,000 training samples, each with 120 previous values for each of the 4 eeg channels), and a relatively simple multilayer perceptron (480 inputs, 128, 128, 3 output), I had 99% accuracy detecting left clenched, right clenched, and unclenched jaw states, and 75% accuracy detecting thinking (and looking) up, down, or straight. In the video, I’m clenching my left or right jaw to control a game of Atari breakout.
+<div class = "text"><p><strong style="text-decoration: underline;">Using machine learning to play Atari breakout with my mind</strong>
+<br>I hacked a muse EEG meditation headset so I could use ML to recognize patterns in raw EEG data. After hours of trying to directly connect the headband to my computer, I eventually found an app that could reliably connect to the headset and send data over OSC, and then I hacked a c# OSC receiver program on my computer to write to a file that a Python program could then pull the live data from. Once I got the live data into Python, I just had to record the raw EEG data while performing various actions. With only around 15 minutes worth of training data (broken up to produce around 15,000 training samples, each with 120 previous values for each of the 4 EEG channels), and a relatively simple multilayer perceptron (480 inputs, 128, 128, 3 output), I had 99% accuracy detecting left clenched, right clenched, and unclenched jaw states, and 75% accuracy detecting thinking (and looking) up, down, or straight. In the video, I’m clenching my left or right jaw to control a game of Atari breakout.
 
 </p></div>
 </div>
@@ -176,7 +176,7 @@ Robotics
 		I have hundreds of hours of software development and control systems experience through robotics, both FRC and FTC. I learned how to effectively (and how easy it is to ineffectively) collaborate on software, and I got to work with some incredibly talented student and mentor programmers.
 		I was the software lead for three years on my FTC team, and below are our 2019 (left) and 2020 (right) robots.
 		<br><br>
-		In 2019, I designed a program that saves encoder values while a human is driving, and then plays those values back so that the robot can drive itself. From the saved encoder values we calculated the robot's change in x, y, and rotation in between each data point. The recorded x,y, and rotation then became setpoints for our control system. Using this method, we were able to get smooth curves into our auto, and we ended up having one of the highest scoring and most consistent autos in all of the San Diego region. 
+		In 2019, I designed a program that saves encoder values while a human is driving, and then plays those values back so that the robot can drive itself. From the saved encoder values we calculated the robot's change in x, y, and rotation in between each data point. The recorded x,y, and rotation then became setpoints for our control system. Using this method, we were able to get smooth curves into our autonomous (non-driver operated) period, and we ended up having one of the highest scoring and most consistent autonomous periods in all of the San Diego region. 
 	 </p>
 	</div>
 	<div class = "blockmod">
@@ -212,7 +212,7 @@ Robotics
 		<div class = "blockmod">
 			<img class="arrow" src="arrow.png">
 			<p><strong style="text-decoration: underline;">Cell Photobleach Analysis Program</strong><br>
-				Over the summer of 2021, I wrote a program in python using ImageJ and TrackMate to automatically identify & track cells from a fluorescence 
+				Over the summer of 2021, I wrote a program in Python using ImageJ and TrackMate to automatically identify & track cells from a fluorescence 
 				microscopy video and plot their brightness over time. We use this program to quantify how quickly different fluorescent proteins photobleach, and we also
 				occasionally use it for photoswitching fluorescent proteins.
 				
@@ -243,7 +243,7 @@ Robotics
 
 
 <p style="text-decoration: underline; background-color: #379683; display:inline; border:6px solid #379683; margin-left:0px; padding-right:.5em;" ><strong>
-Camera-based colony screening software aid
+Camera-based colony screening software
 </strong></p>
 <div class = "text">
 	<div class = "blockmod">
@@ -261,7 +261,7 @@ Camera-based colony screening software aid
 
 		Once the colonies have been ranked, the results are displayed on an iPad mini, so that the user can easily pick the right colonies by putting the plate on top of it.
 
-		I ended up having to use three different programming languages, one scripting language to control the filter wheels and camera, the imageJ macro language to do the vision processing, and java to make the GUIs.
+		I ended up having to use three different programming languages, one scripting language to control the filter wheels and camera, the imageJ macro language to do the vision processing, and Java to make the GUIs.
 
 		</p>
 	
@@ -312,7 +312,7 @@ In Search of Utopia
 		<div class = "blockmod">
 			<img class="arrow" src="arrow.png">
 			<p><strong style="text-decoration: underline;">Turning a Bop it extreme into a controller</strong><br>
-			I put the guts of an Xbox 360 controller inside a bop it! I soldered all of the buttons inside the bop it to the buttons on the Xbox controller, and mounted joysticks to the bop it. I was able to turn one of the big round bop it buttons into a joystick. It has just enough buttons to play overwatch, and to shoot you spin the wheel :p The video is a clip from a Youtube video I made. The full video is here: <a href="https://www.youtube.com/watch?v=Z8bw5sZtrDY&t=32s">https://www.youtube.com/watch?v=Z8bw5sZtrDY&t=32s</a> </p>
+			I put the electronics of an Xbox 360 controller inside a bop it. I soldered all of the buttons inside the bop it to the buttons on the Xbox controller, and mounted joysticks to the bop it. I was able to turn one of the big round bop it buttons into a joystick. It has just enough buttons to play overwatch, and to shoot you spin the wheel :p The video is a clip from a YouTube video I made. The full video is here: <a href="https://www.youtube.com/watch?v=Z8bw5sZtrDY&t=32s">https://www.youtube.com/watch?v=Z8bw5sZtrDY&t=32s</a> </p>
 			</p>
 		</div>
 	</div>
@@ -332,10 +332,10 @@ In Search of Utopia
 </video>
 <div class = "text">
 <div class = "blockmod">
-<p><strong style="text-decoration: underline;">Playing Minecraft without a mouse using my hands!</strong>
+<p><strong style="text-decoration: underline;">Playing Minecraft without a mouse using my hands</strong>
 <br>
 I used a Leap motion hand sensor and processing to recognize hand gestures and hand position. I wrote a program that controls all the mouse functions in Minecraft, so that instead of using a mouse with your right hand you can actually do the actions. You punch to hit things, use an open hand to place things, use two fingers to look around, and one finger swiping changes item slots. 
-As you can see at the end, you can also pull your ring finger in and then turn your hand to cast spells. My processing program types commands into the Minecraft chat really fast to communicate with the Minecraft mod I wrote for the spellcasting. So far you can teleport, and shoot fireballs and lightning! </p>
+As you can see at the end, you can also pull your ring finger in and then turn your hand to cast spells. My processing program types commands into the Minecraft chat really fast to communicate with the Minecraft mod I wrote for the spellcasting. So far you can teleport, and shoot fireballs and lightning </p>
 
 </p>
 <img class="arrow" src="arrow2.png">
